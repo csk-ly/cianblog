@@ -6,24 +6,67 @@ const photos = [
     src: "/images/coffee.jpg",
     title: "窗边，一杯咖啡",
     note: "日常里的停顿",
-    source: "https://unsplash.com/photos/1442512595331-e89e73853f31",
+    category: "日常",
     shape: "tall",
   },
   {
     src: "/images/shore.jpg",
     title: "向着不同的岸",
     note: "海与远方",
-    source: "https://unsplash.com",
+    category: "自然",
     shape: "wide",
   },
   {
     src: "/images/mist.jpg",
     title: "光落在树间",
     note: "绿意与安静",
-    source: "https://unsplash.com",
+    category: "自然",
+    shape: "tall",
+  },
+  {
+    src: "/images/coffee-table.jpg",
+    title: "给自己留一点时间",
+    note: "杯盏之间",
+    category: "日常",
+    shape: "wide",
+  },
+  {
+    src: "/images/hills.jpg",
+    title: "山间有雾",
+    note: "远山的呼吸",
+    category: "自然",
+    shape: "wide",
+  },
+  {
+    src: "/images/notebook.jpg",
+    title: "还有一些话想写",
+    note: "纸页与日常",
+    category: "日常",
+    shape: "tall",
+  },
+  {
+    src: "/images/lake.jpg",
+    title: "在水边坐一会儿",
+    note: "山色入湖",
+    category: "自然",
+    shape: "tall",
+  },
+  {
+    src: "/images/sea.jpg",
+    title: "风从海上来",
+    note: "浪与天光",
+    category: "自然",
+    shape: "wide",
+  },
+  {
+    src: "/images/mountains.jpg",
+    title: "抬头，看见远方",
+    note: "山的轮廓",
+    category: "自然",
     shape: "tall",
   },
 ];
+
 export default function Album() {
   const [active, setActive] = useState<number | null>(null);
   const dialog = useRef<HTMLDialogElement>(null);
@@ -32,13 +75,7 @@ export default function Album() {
   const reduce = useReducedMotion();
   const [filter, setFilter] = useState("全部");
   const shown =
-    filter === "全部"
-      ? photos
-      : photos.filter((p) =>
-          filter === "日常"
-            ? p.src.includes("coffee")
-            : !p.src.includes("coffee"),
-        );
+    filter === "全部" ? photos : photos.filter((p) => p.category === filter);
   useEffect(() => {
     if (active !== null) {
       dialog.current?.showModal();
@@ -69,14 +106,18 @@ export default function Album() {
             onClick={() => setFilter(c)}
           >
             {c}
-            <sup>{c === "全部" ? 3 : c === "日常" ? 1 : 2}</sup>
+            <sup>
+              {c === "全部"
+                ? photos.length
+                : photos.filter((p) => p.category === c).length}
+            </sup>
           </button>
         ))}
         <span>FRAGMENTS OF LIGHT</span>
       </div>
       <div className="album-grid">
         <AnimatePresence mode="popLayout">
-          {shown.map((p, i) => (
+          {shown.map((p) => (
             <motion.button
               layout={!reduce}
               initial={reduce ? false : { opacity: 0, y: 15 }}
@@ -105,7 +146,9 @@ export default function Album() {
                   <strong>{p.title}</strong>
                   <small>{p.note}</small>
                 </span>
-                <span className="album-index">0{photos.indexOf(p) + 1}</span>
+                <span className="album-index">
+                  {String(photos.indexOf(p) + 1).padStart(2, "0")}
+                </span>
               </div>
             </motion.button>
           ))}

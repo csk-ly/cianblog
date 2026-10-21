@@ -13,7 +13,6 @@ export default function Footer() {
           <br />
           好在还可以慢慢写。
         </p>
-        <a href="/feed.xml">订阅这些寻常 ↗</a>
       </div>
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} 此岸 · 文字与生活的栖息地</span>

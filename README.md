@@ -49,7 +49,7 @@ draft: false
 - 新增、修改、删除文章后，需要重新构建和部署。
 - Markdown 仅保存在源码中；网站不提供原文下载入口，也不发布原文文件。浏览器已收到的文章内容无法从技术上完全禁止复制或保存。
 - 首页文案在 `src/components/Hero.tsx`；站名、导航在 `src/components/Navigation.tsx`；配色在 `src/app/globals.css`。
-- 相册在 `src/components/Album.tsx` 配置，当前使用三张有来源标识的示例风景、咖啡配图。支持分类、放大、上一张、下一张、Esc 关闭与方向键切换。
+- 相册在 `src/components/Album.tsx` 配置，当前使用九张有来源标识的风景与生活示例配图。支持分类、放大、上一张、下一张、Esc 关闭与方向键切换。
 
 ## 已接入的文章
 
@@ -66,3 +66,7 @@ draft: false
 ## 站点身份
 
 `.openai/hosting.json` 保存 Sites 项目 ID；更新现有站点时复用，不新建。源文件与部署产物分开管理。
+
+## 订阅入口
+
+头部 RSS 入口和底部订阅按钮已隐藏；`feed.xml` 仍然保留，后续需要时可以恢复入口。

@@ -52,9 +52,6 @@ export default function Navigation() {
             {label}
           </Link>
         ))}
-        <a href="/feed.xml" className="nav-rss" aria-label="订阅 RSS">
-          RSS <span>↗</span>
-        </a>
       </nav>
     </header>
   );

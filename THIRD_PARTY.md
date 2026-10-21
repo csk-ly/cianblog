@@ -18,3 +18,12 @@ React Bits 的许可证随源文件一同保存在 `src/components/react-bits-LI
 - 海岸：https://images.unsplash.com/photo-1475924156734-496f6cac6ec1
 - 森林：https://images.unsplash.com/photo-1441974231531-c6227db76b6e
 - 许可：https://unsplash.com/license
+
+## 相册扩充配图
+
+- 山雾：https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05
+- 湖泊：https://images.unsplash.com/photo-1493246507139-91e8fad9978e
+- 海浪：https://images.unsplash.com/photo-1518837695005-2083093ee35b
+- 咖啡静物：https://images.unsplash.com/photo-1495474472287-4d71bcdd2085
+- 书写桌面：https://images.unsplash.com/photo-1499750310107-5fef28a66643
+- 山峰：https://images.unsplash.com/photo-1464822759023-fed622ff2c3b
