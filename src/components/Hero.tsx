@@ -55,7 +55,7 @@ export default function Hero() {
           </span>
         </h1>
         <p className="hero-description">
-          住在南京，做技术，偶尔写字。
+          在南京，做技术，偶尔写字。
           <br />
           这里有旧事、家人，以及还没想明白的生活。
         </p>
