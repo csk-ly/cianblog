@@ -1,6 +1,6 @@
 ---
 title: "设计院大楼"
-category: "技术手记"
+category: "技术"
 description: "一个设计院里写代码的文科生，记录技术与生活的交汇。"
 image: "/images/mist.jpg"
 order: 5

@@ -35,9 +35,9 @@ export default async function Article({
         <header className="post-header">
           <Link
             className="back-link"
-            href={post.category === "技术手记" ? "/notes/" : "/journal/"}
+            href={post.category === "技术" ? "/notes/" : "/journal/"}
           >
-            ← 返回{post.category === "技术手记" ? "技术手记" : "随笔"}
+            ← 返回{post.category === "技术" ? "技术" : "随笔"}
           </Link>
           <div className="eyebrow">
             {post.category} <span>／</span> 约 {post.minutes} 分钟阅读

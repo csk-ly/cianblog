@@ -35,7 +35,7 @@ export default function Navigation() {
         {[
           ["/", "首页"],
           ["/journal/", "随笔"],
-          ["/notes/", "技术手记"],
+          ["/notes/", "技术"],
           ["/album/", "光影"],
           ["/about/", "关于"],
         ].map(([href, label]) => (
