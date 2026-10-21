@@ -54,3 +54,18 @@ React Bits 的许可证随源文件一同保存在 `src/components/react-bits-LI
 - 花开的时候：https://images.unsplash.com/photo-1490750967868-88aa4486c946
 - 城市的轮廓：https://images.unsplash.com/photo-1477959858617-67f85cf4f1df
 - 夜幕慢慢落下：https://images.unsplash.com/photo-1519608487953-e999c86e7455
+
+## 咖啡馆、街巷与校园选图
+
+- 走回校园：https://images.unsplash.com/photo-1562774053-701939374585
+- 图书馆的午后：https://images.unsplash.com/photo-1498243691581-b145c3f54a5a
+- 青春有回声：https://images.unsplash.com/photo-1541339907198-e08756dedf3f
+- 那些读书的日子：https://images.unsplash.com/photo-1519452575417-564c1401ecc0
+- 街头的灯亮了：https://images.unsplash.com/photo-1540959733332-eab4deabeeaf
+- 沿街走走：https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b
+- 人间烟火：https://images.unsplash.com/photo-1519501025264-65ba15a82390
+- 城市另一面：https://images.unsplash.com/photo-1514565131-fce0801e5785
+- 找一间咖啡馆：https://images.unsplash.com/photo-1554118811-1e0d58224f24
+- 窗边的位置：https://images.unsplash.com/photo-1559925393-8be0ec4767c8
+- 等一个闲暇的下午：https://images.unsplash.com/photo-1555396273-367ea4eb4db5
+- 推门，咖啡香：https://images.unsplash.com/photo-1445116572660-236099ec97a0

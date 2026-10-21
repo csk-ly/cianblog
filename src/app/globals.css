@@ -1557,6 +1557,16 @@ svg {
   .album-grid {
     columns: 1;
   }
+  .album-filter {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .album-filter button {
+    white-space: nowrap;
+  }
+  .album-filter > span {
+    display: none;
+  }
   .album-photo {
     margin-bottom: 24px;
   }
