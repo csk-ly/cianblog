@@ -1338,53 +1338,75 @@ svg {
   margin-bottom: 40px;
 }
 .album-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 45px 35px;
-  align-items: start;
+  columns: 3;
+  column-gap: 28px;
 }
 .album-photo {
-  display: block;
+  display: inline-block;
+  vertical-align: top;
+  break-inside: avoid;
   text-align: left;
   padding: 0;
   width: 100%;
+  margin-bottom: 30px;
+  border: 0;
+  background: transparent;
+  perspective: 1000px;
 }
-.album-photo:nth-child(2) {
-  margin-top: 75px;
+.album-print {
+  padding: 9px 9px 0;
+  border: 1px solid #e5e4da;
+  border-radius: 14px;
+  background: #fffefa;
+  box-shadow:
+    0 4px 16px #29342108,
+    0 1px 3px #29342106;
+  transition:
+    transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 0.5s;
 }
 .album-image {
   position: relative;
   overflow: hidden;
+  border-radius: 8px;
   background: #e4e7dc;
 }
-.album-photo.tall .album-image {
-  aspect-ratio: 4/5;
-}
-.album-photo.wide .album-image {
-  aspect-ratio: 5/4;
+.album-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(
+    circle at var(--glow-x, 50%) var(--glow-y, 30%),
+    #fff6,
+    transparent 65%
+  );
+  mix-blend-mode: soft-light;
+  transition: opacity 0.5s;
 }
 .album-image img {
+  height: auto;
   transition:
-    transform 1s,
-    filter 1s;
-  filter: saturate(0.65);
-}
-.album-photo:hover img {
-  transform: scale(1.035);
-  filter: saturate(0.9);
+    transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1),
+    filter 0.7s;
+  filter: saturate(0.78);
 }
 .album-expand {
   position: absolute;
-  right: 17px;
-  bottom: 17px;
-  background: #f7f6f2ed;
-  padding: 10px 14px;
-  font-size: 11px;
+  z-index: 1;
+  right: 12px;
+  bottom: 12px;
+  background: #f7f6f2e8;
+  backdrop-filter: blur(8px);
+  border: 1px solid #ffffff80;
+  border-radius: 20px;
+  padding: 8px 12px;
+  font-size: 10px;
   opacity: 0;
-  transform: translateY(5px);
+  transform: translateY(7px);
   transition: 0.35s;
 }
-.album-photo:hover .album-expand,
 .album-photo:focus-visible .album-expand {
   opacity: 1;
   transform: none;
@@ -1393,33 +1415,58 @@ svg {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 0;
+  gap: 10px;
+  padding: 17px 8px 19px;
 }
 .album-caption strong {
-  font: 500 19px/1.5 var(--serif);
-  letter-spacing: 0.05em;
+  font: 500 17px/1.5 var(--serif);
+  letter-spacing: 0.04em;
   display: block;
 }
 .album-caption small {
-  font-size: 11px;
+  font-size: 10px;
   color: var(--muted);
   display: block;
-  margin-top: 6px;
+  margin-top: 5px;
 }
 .album-index {
-  font: italic 12px Georgia;
-  color: var(--olive);
+  font: italic 11px Georgia;
+  color: #8e967e;
 }
-.photo-credit {
-  font-size: 11px;
-  color: var(--muted);
-  border-top: 1px solid var(--line);
-  padding-top: 24px;
-  margin-top: 40px;
+@media (hover: hover) and (pointer: fine) {
+  .album-photo:hover .album-print {
+    transform: translateY(-5px) rotateX(var(--tilt-x, 0deg))
+      rotateY(var(--tilt-y, 0deg));
+    box-shadow:
+      0 20px 35px -15px #29342130,
+      0 5px 14px #2934210d;
+  }
+  .album-photo:hover img {
+    transform: scale(1.045);
+    filter: saturate(1);
+  }
+  .album-photo:hover .album-image::after,
+  .album-photo:hover .album-expand {
+    opacity: 1;
+    transform: none;
+  }
 }
-.photo-credit a {
-  text-decoration: underline;
-  text-underline-offset: 4px;
+@media (max-width: 960px) {
+  .album-grid {
+    columns: 2;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .album-print,
+  .album-image img,
+  .album-image::after,
+  .album-expand {
+    transition: none;
+  }
+  .album-photo:hover .album-print,
+  .album-photo:hover img {
+    transform: none;
+  }
 }
 .lightbox {
   position: fixed;
@@ -1508,17 +1555,10 @@ svg {
     font-size: 31px;
   }
   .album-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
+    columns: 1;
   }
-  .album-photo:nth-child(2) {
-    margin-top: 0;
-  }
-  .album-photo.tall .album-image {
-    aspect-ratio: 4/5;
-  }
-  .album-photo.wide .album-image {
-    aspect-ratio: 5/4;
+  .album-photo {
+    margin-bottom: 24px;
   }
   .album-expand {
     opacity: 1;

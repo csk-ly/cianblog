@@ -4,234 +4,267 @@ import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 const photos = [
   {
     src: "/images/coffee.jpg",
+    width: 1600,
+    height: 1067,
     title: "窗边，一杯咖啡",
     note: "日常里的停顿",
     category: "日常",
-    shape: "tall",
   },
   {
     src: "/images/shore.jpg",
+    width: 900,
+    height: 600,
     title: "向着不同的岸",
     note: "海与远方",
     category: "自然",
-    shape: "wide",
   },
   {
     src: "/images/mist.jpg",
+    width: 900,
+    height: 599,
     title: "光落在树间",
     note: "绿意与安静",
     category: "自然",
-    shape: "tall",
   },
   {
     src: "/images/coffee-table.jpg",
+    width: 1200,
+    height: 800,
     title: "给自己留一点时间",
     note: "杯盏之间",
     category: "日常",
-    shape: "wide",
   },
   {
     src: "/images/hills.jpg",
+    width: 1200,
+    height: 715,
     title: "山间有雾",
     note: "远山的呼吸",
     category: "自然",
-    shape: "wide",
   },
   {
     src: "/images/notebook.jpg",
+    width: 1200,
+    height: 800,
     title: "还有一些话想写",
     note: "纸页与日常",
     category: "日常",
-    shape: "tall",
   },
   {
     src: "/images/lake.jpg",
+    width: 1200,
+    height: 800,
     title: "在水边坐一会儿",
     note: "山色入湖",
     category: "自然",
-    shape: "tall",
   },
   {
     src: "/images/sea.jpg",
+    width: 1200,
+    height: 800,
     title: "风从海上来",
     note: "浪与天光",
     category: "自然",
-    shape: "wide",
   },
   {
     src: "/images/mountains.jpg",
+    width: 1200,
+    height: 800,
     title: "抬头，看见远方",
     note: "山的轮廓",
     category: "自然",
-    shape: "tall",
   },
   {
     src: "/images/forest-path.jpg",
+    width: 1200,
+    height: 800,
     title: "往林深处走",
     note: "树影之间",
     category: "自然",
-    shape: "wide",
   },
   {
     src: "/images/green-valley.jpg",
+    width: 1200,
+    height: 1981,
     title: "山野的来信",
     note: "绿意漫生",
     category: "自然",
-    shape: "tall",
   },
   {
     src: "/images/sunlit-woods.jpg",
+    width: 1200,
+    height: 800,
     title: "光穿过枝叶",
     note: "林间一瞬",
     category: "自然",
-    shape: "tall",
   },
   {
     src: "/images/quiet-water.jpg",
+    width: 1200,
+    height: 800,
     title: "湖面没有答案",
     note: "水色与山影",
     category: "自然",
-    shape: "wide",
   },
   {
     src: "/images/open-land.jpg",
+    width: 1200,
+    height: 1800,
     title: "走到开阔处",
     note: "天地之间",
     category: "自然",
-    shape: "tall",
   },
   {
     src: "/images/distant-peaks.jpg",
+    width: 1200,
+    height: 797,
     title: "远方还很远",
     note: "山川无言",
     category: "自然",
-    shape: "tall",
   },
   {
     src: "/images/mountain-road.jpg",
+    width: 1200,
+    height: 800,
     title: "沿途慢慢看",
     note: "行走的风景",
     category: "自然",
-    shape: "wide",
   },
   {
     src: "/images/evening-sky.jpg",
+    width: 1200,
+    height: 800,
     title: "等天色慢下来",
     note: "暮色渐深",
     category: "自然",
-    shape: "tall",
   },
   {
     src: "/images/wild-green.jpg",
+    width: 1200,
+    height: 800,
     title: "风吹过原野",
     note: "草木有声",
     category: "自然",
-    shape: "tall",
   },
   {
     src: "/images/blue-horizon.jpg",
+    width: 1200,
+    height: 798,
     title: "把目光交给海",
     note: "一线天涯",
     category: "自然",
-    shape: "wide",
   },
   {
     src: "/images/ocean-edge.jpg",
+    width: 1200,
+    height: 800,
     title: "岸边的片刻",
     note: "潮汐往复",
     category: "自然",
-    shape: "tall",
   },
   {
     src: "/images/waterfall.jpg",
+    width: 1200,
+    height: 800,
     title: "水流向远处",
     note: "山间回响",
     category: "自然",
-    shape: "tall",
   },
   {
     src: "/images/night-sky.jpg",
+    width: 1200,
+    height: 1140,
     title: "夜色之外",
     note: "仰望星光",
     category: "自然",
-    shape: "wide",
   },
   {
     src: "/images/autumn.jpg",
+    width: 1200,
+    height: 1600,
     title: "季节轻轻经过",
     note: "草木与时光",
     category: "自然",
-    shape: "tall",
   },
   {
     src: "/images/snow-peaks.jpg",
+    width: 1200,
+    height: 795,
     title: "山顶的白",
     note: "高处有风",
     category: "自然",
-    shape: "tall",
   },
   {
     src: "/images/morning-cup.jpg",
+    width: 1200,
+    height: 1800,
     title: "从一杯开始",
     note: "清晨的温度",
     category: "日常",
-    shape: "wide",
   },
   {
     src: "/images/coffee-pause.jpg",
+    width: 1200,
+    height: 915,
     title: "停下来闻一闻",
     note: "咖啡香气",
     category: "日常",
-    shape: "tall",
   },
   {
     src: "/images/cafe-corner.jpg",
+    width: 1200,
+    height: 793,
     title: "坐在街角",
     note: "慢一点也好",
     category: "日常",
-    shape: "tall",
   },
   {
     src: "/images/book-pages.jpg",
+    width: 1200,
+    height: 704,
     title: "文字之间",
     note: "阅读的时间",
     category: "日常",
-    shape: "wide",
   },
   {
     src: "/images/reading-time.jpg",
+    width: 1200,
+    height: 1109,
     title: "读到某一页",
     note: "书里的世界",
     category: "日常",
-    shape: "tall",
   },
   {
     src: "/images/desk-light.jpg",
+    width: 1200,
+    height: 800,
     title: "光落在桌上",
     note: "平凡的一天",
     category: "日常",
-    shape: "tall",
   },
   {
     src: "/images/flowers.jpg",
+    width: 1200,
+    height: 800,
     title: "花开的时候",
     note: "小小的欢喜",
     category: "日常",
-    shape: "wide",
   },
   {
     src: "/images/city-walk.jpg",
+    width: 1200,
+    height: 738,
     title: "城市的轮廓",
     note: "街头与远处",
     category: "日常",
-    shape: "tall",
   },
   {
     src: "/images/rain-window.jpg",
+    width: 1200,
+    height: 800,
     title: "夜幕慢慢落下",
     note: "灯火与夜色",
     category: "日常",
-    shape: "tall",
   },
 ];
 
@@ -293,30 +326,54 @@ export default function Album() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.4 }}
               key={p.src}
-              className={"album-photo " + p.shape}
+              className="album-photo"
+              onPointerMove={(e) => {
+                if (reduce || e.pointerType !== "mouse") return;
+                const rect = e.currentTarget.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width;
+                const y = (e.clientY - rect.top) / rect.height;
+                e.currentTarget.style.setProperty(
+                  "--tilt-x",
+                  `${(0.5 - y) * 5}deg`,
+                );
+                e.currentTarget.style.setProperty(
+                  "--tilt-y",
+                  `${(x - 0.5) * 5}deg`,
+                );
+                e.currentTarget.style.setProperty("--glow-x", `${x * 100}%`);
+                e.currentTarget.style.setProperty("--glow-y", `${y * 100}%`);
+              }}
+              onPointerLeave={(e) => {
+                e.currentTarget.style.setProperty("--tilt-x", "0deg");
+                e.currentTarget.style.setProperty("--tilt-y", "0deg");
+              }}
               onClick={(e) => {
                 trigger.current = e.currentTarget;
                 setActive(photos.indexOf(p));
               }}
               aria-label={`放大查看：${p.title}`}
             >
-              <div className="album-image">
-                <img
-                  src={p.src}
-                  alt={p.title}
-                  loading="lazy"
-                  draggable={false}
-                />
-                <span className="album-expand">放大 ↗</span>
-              </div>
-              <div className="album-caption">
-                <span>
-                  <strong>{p.title}</strong>
-                  <small>{p.note}</small>
-                </span>
-                <span className="album-index">
-                  {String(photos.indexOf(p) + 1).padStart(2, "0")}
-                </span>
+              <div className="album-print">
+                <div className="album-image">
+                  <img
+                    src={p.src}
+                    alt={p.title}
+                    width={p.width}
+                    height={p.height}
+                    loading="lazy"
+                    draggable={false}
+                  />
+                  <span className="album-expand">放大 ↗</span>
+                </div>
+                <div className="album-caption">
+                  <span>
+                    <strong>{p.title}</strong>
+                    <small>{p.note}</small>
+                  </span>
+                  <span className="album-index">
+                    {String(photos.indexOf(p) + 1).padStart(2, "0")}
+                  </span>
+                </div>
               </div>
             </motion.button>
           ))}

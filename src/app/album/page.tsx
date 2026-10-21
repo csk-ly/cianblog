@@ -13,8 +13,8 @@ export default function AlbumPage() {
           把光影留下来<span className="title-dot">。</span>
         </h1>
         <p className="page-intro">有些片刻，适合看一会儿，不必急着说什么。</p>
-        <Album />
       </Reveal>
+      <Album />
     </section>
   );
 }
