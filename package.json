@@ -1,0 +1,34 @@
+{
+  "name": "shore-journal",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "next build --webpack",
+    "typecheck": "tsc --noEmit",
+    "preview": "node scripts/serve.mjs",
+    "prebuild": "node scripts/prepare-content.mjs",
+    "predev": "node scripts/prepare-content.mjs",
+    "format": "prettier --write src scripts next.config.ts tsconfig.json"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "lucide-react": "latest",
+    "motion": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "prettier": "^3.9.10",
+    "typescript": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}
