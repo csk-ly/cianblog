@@ -1,5 +1,5 @@
 ---
-title: "我的南京旧忆：三山街一碗卤肉饭，浦口渡口一段旧时光"
+title: "旧忆"
 category: "随笔"
 description: "一碗卤肉饭暖胃，一段渡口的江风，还有市井烟火里彼此托举的人，留在了十年前的南京记忆里。"
 image: "/images/cafe-counter.jpg"
