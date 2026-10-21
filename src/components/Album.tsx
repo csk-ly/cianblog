@@ -154,12 +154,6 @@ export default function Album() {
           ))}
         </AnimatePresence>
       </div>
-      <p className="photo-credit">
-        影像选集 · 图片来源{" "}
-        <a href="https://unsplash.com" target="_blank" rel="noreferrer">
-          Unsplash ↗
-        </a>
-      </p>
       <dialog
         ref={dialog}
         className="lightbox"

@@ -1,7 +1,7 @@
 import Album from "@/components/Album";
 import Reveal from "@/components/Reveal";
 export const metadata = {
-  title: "相册",
+  title: "光影",
   description: "文字之外，把一些光影留下来。",
 };
 export default function AlbumPage() {
