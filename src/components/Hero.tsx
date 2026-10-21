@@ -48,9 +48,9 @@ export default function Hero() {
               className="hero-title-line"
             />
             <span className="hero-aside">
-              日々のこと、
+              Day by day,
               <br />
-              少しずつ。
+              little by little.
             </span>
           </span>
         </h1>
