@@ -1,6 +1,7 @@
 ---
 title: "雾栖"
-category: "日常"
+category: "随笔"
+subcategory: "过往"
 description: "在文学笔记与机械键盘之间，寻找一处可栖的角落。"
 image: "/images/mist.jpg"
 order: 3

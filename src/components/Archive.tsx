@@ -6,11 +6,13 @@ export default function Archive({
   eyebrow,
   description,
   posts,
+  categories,
 }: {
   title: string;
   eyebrow: string;
   description: string;
   posts: Post[];
+  categories: string[];
 }) {
   return (
     <section className="archive-page">
@@ -21,8 +23,12 @@ export default function Archive({
           <span className="title-dot">。</span>
         </h1>
         <p className="page-intro">{description}</p>
-        <ArticleList posts={posts.map(({ content, ...p }) => p)} />
       </Reveal>
+      <ArticleList
+        posts={posts.map(({ content, ...p }) => p)}
+        categories={categories}
+        filterBy="subcategory"
+      />
     </section>
   );
 }

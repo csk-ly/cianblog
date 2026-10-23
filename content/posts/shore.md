@@ -1,6 +1,7 @@
 ---
 title: "岸"
 category: "随笔"
+subcategory: "如今"
 description: "父亲端着茶杯问，是不是在家睡得更踏实。"
 image: "/images/shore.jpg"
 order: 1

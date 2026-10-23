@@ -5,6 +5,7 @@ export type Post = {
   slug: string;
   title: string;
   category: string;
+  subcategory: string;
   description: string;
   date: string | null;
   image: string;
@@ -29,6 +30,9 @@ export function getPosts(): Post[] {
           slug: name.replace(/\.md$/, ""),
           title: String(data.title),
           category: String(data.category),
+          subcategory: String(
+            data.subcategory || (data.category === "技术" ? "技术" : "过往"),
+          ),
           description: String(data.description),
           date: data.date ? String(data.date) : null,
           image: data.image || "/images/coffee.jpg",

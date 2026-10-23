@@ -31,6 +31,7 @@ npm run preview
 ---
 title: "文章标题"
 category: "随笔"
+subcategory: "如今"
 description: "文章列表上的一小段介绍"
 image: "/images/coffee.jpg"
 order: 6
@@ -42,7 +43,8 @@ draft: false
 正文使用标准 Markdown。
 ```
 
-- 分类使用“随笔”“日常”“技术手记”；首页自动产生筛选项。
+- `category` 为栏目，使用“随笔”或“技术”；首页按栏目筛选。
+- `subcategory` 为栏目下的分类：随笔使用“过往”“如今”“明天”，技术使用“技术”“职场”。栏目页保留全部分类，包括暂时没有文章的分类。
 - `order` 越小越靠前。原稿未提供确切发表日期，因此没有虚构日期。
 - 可以设置 `date: "2026-10-21"`，RSS 会使用该日期。
 - `draft: true` 的文章不进入列表、阅读路由、RSS 。

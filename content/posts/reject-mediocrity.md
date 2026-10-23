@@ -1,6 +1,7 @@
 ---
 title: "拒绝平庸"
 category: "随笔"
+subcategory: "过往"
 description: "一篇高考作文，一段年少遗憾。多年后重新回望，平庸从不是过错，也没必要拒绝。"
 image: "/images/notebook.jpg"
 order: -2

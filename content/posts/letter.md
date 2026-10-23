@@ -1,6 +1,7 @@
 ---
 title: "风笺"
 category: "随笔"
+subcategory: "过往"
 description: "那些以为无人留意的年岁，原来也被认真记着。"
 image: "/images/shore.jpg"
 order: 4

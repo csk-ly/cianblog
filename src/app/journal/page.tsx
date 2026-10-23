@@ -8,6 +8,7 @@ export default function Journal() {
       eyebrow="THE JOURNAL / 随笔"
       description="有些事过去了，仍然值得好好写下来。"
       posts={getPosts().filter((p) => p.category !== "技术")}
+      categories={["过往", "如今", "明天"]}
     />
   );
 }

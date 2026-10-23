@@ -8,6 +8,7 @@ export default function Notes() {
       eyebrow="NOTES / 技术与思考"
       description="记录技术，也记录一个身处其中的人。"
       posts={getPosts().filter((p) => p.category === "技术")}
+      categories={["技术", "职场"]}
     />
   );
 }

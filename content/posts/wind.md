@@ -1,6 +1,7 @@
 ---
 title: "风瑟"
 category: "随笔"
+subcategory: "过往"
 description: "一杯拿铁，一段年少时未曾说出口的心事。"
 image: "/images/coffee.jpg"
 order: 2

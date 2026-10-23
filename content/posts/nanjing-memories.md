@@ -1,6 +1,7 @@
 ---
 title: "旧忆"
 category: "随笔"
+subcategory: "如今"
 description: "一碗卤肉饭暖胃，一段渡口的江风，还有市井烟火里彼此托举的人，留在了十年前的南京记忆里。"
 image: "/images/cafe-counter.jpg"
 order: -1

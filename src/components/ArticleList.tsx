@@ -7,15 +7,22 @@ import { Arrow } from "./icons";
 export default function ArticleList({
   posts,
   filterable = true,
+  categories: suppliedCategories,
+  filterBy = "category",
 }: {
   posts: Omit<Post, "content">[];
   filterable?: boolean;
+  categories?: string[];
+  filterBy?: "category" | "subcategory";
 }) {
   const [filter, setFilter] = useState("全部");
   const reduce = useReducedMotion();
-  const categories = ["全部", ...new Set(posts.map((p) => p.category))];
+  const categories = [
+    "全部",
+    ...(suppliedCategories || [...new Set(posts.map((p) => p[filterBy]))]),
+  ];
   const selected =
-    filter === "全部" ? posts : posts.filter((p) => p.category === filter);
+    filter === "全部" ? posts : posts.filter((p) => p[filterBy] === filter);
   return (
     <div>
       {filterable && (
@@ -31,7 +38,7 @@ export default function ArticleList({
               <sup>
                 {c === "全部"
                   ? posts.length
-                  : posts.filter((p) => p.category === c).length}
+                  : posts.filter((p) => p[filterBy] === c).length}
               </sup>
             </button>
           ))}
@@ -56,7 +63,9 @@ export default function ArticleList({
                 </span>
                 <div className="article-row-main">
                   <div className="article-meta">
-                    <span>{post.category}</span>
+                    <span>
+                      {post.category} · {post.subcategory}
+                    </span>
                     <span>·</span>
                     <span>约 {post.minutes} 分钟</span>
                   </div>

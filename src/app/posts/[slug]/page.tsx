@@ -40,7 +40,8 @@ export default async function Article({
             ← 返回{post.category === "技术" ? "技术" : "随笔"}
           </Link>
           <div className="eyebrow">
-            {post.category} <span>／</span> 约 {post.minutes} 分钟阅读
+            {post.category} · {post.subcategory} <span>／</span> 约{" "}
+            {post.minutes} 分钟阅读
           </div>
           <h1>{post.title}</h1>
           <p>{post.description}</p>
@@ -56,7 +57,9 @@ export default async function Article({
         </div>
         <div className="post-end">
           <span>— 写于生活之中 —</span>
-          <Link href="/journal/">回到文章目录 ↗</Link>
+          <Link href={post.category === "技术" ? "/notes/" : "/journal/"}>
+            回到文章目录 ↗
+          </Link>
         </div>
         <Link className="next-post" href={`/posts/${next.slug}/`}>
           <div>
