@@ -16,7 +16,7 @@ export default function Footer() {
       </div>
       <div className="footer-bottom">
         <div className="footer-legal">
-          <span>© {new Date().getFullYear()} 此岸 · 文字与生活的栖息地</span>
+          <span>© {new Date().getFullYear()} 高温若寒 · 此岸</span>
           <a
             className="footer-icp"
             href="https://beian.miit.gov.cn/"

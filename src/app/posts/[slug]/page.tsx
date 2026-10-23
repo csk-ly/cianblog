@@ -46,7 +46,7 @@ export default async function Article({
           <h1>{post.title}</h1>
           <p>{post.description}</p>
           <div className="post-byline">
-            <span>此岸 · 个人手记</span>
+            <span>高温若寒 · 个人手记</span>
             <span>慢慢读，不着急。</span>
           </div>
         </header>
