@@ -30,10 +30,10 @@ export default function Footer() {
           南京，中国 <i className="status-dot" /> 仍在记录
         </span>
         <div className="footer-links">
-          <a href="#top">回到页首 ↑</a>
           <a className="footer-email" href="mailto:709888088@qq.com">
             709888088@qq.com
           </a>
+          <a href="#top">回到页首 ↑</a>
         </div>
       </div>
     </footer>
