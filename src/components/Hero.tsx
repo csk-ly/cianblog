@@ -112,7 +112,9 @@ export default function Hero() {
             />
           </AnimatePresence>
           <div className="photo-shade" />
-          <span className="photo-vertical">把日子，写成自己的模样。</span>
+          <span className="photo-vertical">
+            <span className="photo-quote">把日子，写成自己的模样。</span>
+          </span>
         </motion.div>
         <div className="photo-caption">
           <span>

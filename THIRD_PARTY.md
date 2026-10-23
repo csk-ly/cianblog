@@ -69,3 +69,7 @@ React Bits 的许可证随源文件一同保存在 `src/components/react-bits-LI
 - 窗边的位置：https://images.unsplash.com/photo-1559925393-8be0ec4767c8
 - 等一个闲暇的下午：https://images.unsplash.com/photo-1555396273-367ea4eb4db5
 - 推门，咖啡香：https://images.unsplash.com/photo-1445116572660-236099ec97a0
+
+## 首页照片文字光泽
+
+竖排文字的慢速光泽参考 React Bits Shiny Text（https://reactbits.dev/text-animations/shiny-text）的渐变扫光思路，使用适配竖排阅读的 CSS 实现；未直接复制该组件源码。支持减少动态效果设置。

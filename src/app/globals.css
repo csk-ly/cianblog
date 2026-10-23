@@ -271,26 +271,51 @@ svg {
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(270deg, #101b164d, transparent 35%),
+    linear-gradient(270deg, #101b166b, #101b161a 18%, transparent 42%),
     linear-gradient(0deg, rgba(31, 41, 31, 0.28), transparent 50%);
 }
 .photo-vertical {
   position: absolute;
-  right: 16px;
-  top: 24px;
-  padding: 14px 8px;
-  border: 1px solid #ffffff38;
-  border-radius: 3px;
-  background: #101b1670;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  box-shadow: 0 6px 22px #07120b1a;
+  right: 24px;
+  top: 32px;
   writing-mode: vertical-rl;
-  font: 12px/2 var(--serif);
+  font: 13px/2 var(--serif);
   font-weight: 600;
   letter-spacing: 0.25em;
   color: #fffef8;
-  text-shadow: 0 1px 3px #07120bcc;
+  pointer-events: none;
+}
+.photo-quote {
+  display: inline-block;
+  background: linear-gradient(
+    180deg,
+    #eeecdf 36%,
+    #ffffff 48%,
+    #ffffff 52%,
+    #eeecdf 64%
+  );
+  background-size: 100% 300%;
+  background-position: 50% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 1px #07120bf2) drop-shadow(0 0 3px #07120bb3);
+  animation: photo-text-shine 8s ease-in-out infinite;
+}
+@keyframes photo-text-shine {
+  0%,
+  20% {
+    background-position: 50% 100%;
+  }
+  65%,
+  100% {
+    background-position: 50% 0%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .photo-quote {
+    animation: none;
+  }
 }
 .photo-caption {
   display: flex;
@@ -1008,9 +1033,8 @@ svg {
     font-size: 7px;
   }
   .photo-vertical {
-    right: 12px;
-    top: 16px;
-    padding: 12px 7px;
+    right: 20px;
+    top: 24px;
     font-size: 11px;
   }
   .hero-stamp {
