@@ -641,6 +641,20 @@ svg {
   align-items: baseline;
   gap: 8px 18px;
 }
+.footer-contact {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: #67715f;
+}
+.footer-contact a {
+  text-underline-offset: 4px;
+}
+.footer-contact a:hover,
+.footer-contact a:focus-visible {
+  text-decoration: underline;
+}
 .footer-icp {
   font-size: 10px;
   white-space: nowrap;

@@ -31,6 +31,9 @@ export default function Footer() {
         </span>
         <a href="#top">回到页首 ↑</a>
       </div>
+      <div className="footer-contact">
+        <a href="mailto:709888088@qq.com">709888088@qq.com</a>
+      </div>
     </footer>
   );
 }
