@@ -635,6 +635,21 @@ svg {
   letter-spacing: 0.05em;
   color: #909587;
 }
+.footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 18px;
+}
+.footer-icp {
+  font-size: 10px;
+  white-space: nowrap;
+  text-underline-offset: 4px;
+}
+.footer-icp:hover,
+.footer-icp:focus-visible {
+  text-decoration: underline;
+}
 .footer-bottom .status-dot {
   margin: 0 5px 1px 18px;
   width: 4px;

@@ -15,7 +15,17 @@ export default function Footer() {
         </p>
       </div>
       <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} 此岸 · 文字与生活的栖息地</span>
+        <div className="footer-legal">
+          <span>© {new Date().getFullYear()} 此岸 · 文字与生活的栖息地</span>
+          <a
+            className="footer-icp"
+            href="https://beian.miit.gov.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            苏ICP备2025165759号-2
+          </a>
+        </div>
         <span>
           南京，中国 <i className="status-dot" /> 仍在记录
         </span>
