@@ -697,11 +697,22 @@ svg {
   margin-bottom: 25px;
   color: #6c7565;
 }
-.about-body .lead {
+.about-body .lead,
+.about-copy > p:first-child {
   font-size: 22px;
   line-height: 1.9;
   color: var(--ink);
   margin-bottom: 35px;
+}
+.about-copy a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+}
+.about-copy strong {
+  font-weight: 600;
+  color: var(--ink);
 }
 .reading-page {
   max-width: 760px;
@@ -1218,7 +1229,8 @@ svg {
   .vertical-note {
     display: none;
   }
-  .about-body .lead {
+  .about-body .lead,
+  .about-copy > p:first-child {
     font-size: 20px;
   }
   .about-body p {
