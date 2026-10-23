@@ -641,18 +641,19 @@ svg {
   align-items: baseline;
   gap: 8px 18px;
 }
-.footer-contact {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 11px;
-  letter-spacing: 0.04em;
-  color: #67715f;
+.footer-links {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  flex-shrink: 0;
 }
-.footer-contact a {
+.footer-email {
+  font-size: 10px;
+  white-space: nowrap;
   text-underline-offset: 4px;
 }
-.footer-contact a:hover,
-.footer-contact a:focus-visible {
+.footer-email:hover,
+.footer-email:focus-visible {
   text-decoration: underline;
 }
 .footer-icp {
@@ -1214,10 +1215,9 @@ svg {
     font-size: 8px;
     position: relative;
   }
-  .footer-bottom > a {
-    position: absolute;
-    right: 0;
-    bottom: 0;
+  .footer-links {
+    justify-content: space-between;
+    width: 100%;
   }
   .footer-bottom .status-dot {
     margin-left: 8px;
