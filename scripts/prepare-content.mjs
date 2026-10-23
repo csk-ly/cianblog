@@ -28,7 +28,7 @@ const escape = (s) =>
   );
 fs.writeFileSync(
   "public/feed.xml",
-  `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>此岸</title><link>${origin}</link><description>写代码，也记下一些寻常。</description><language>zh-CN</language>${posts.map((p) => `<item><title>${escape(p.data.title)}</title><link>${origin}/posts/${p.slug}/</link><guid>${origin}/posts/${p.slug}/</guid><description>${escape(p.data.description)}</description>${p.data.date ? `<pubDate>${new Date(p.data.date).toUTCString()}</pubDate>` : ""}</item>`).join("")}</channel></rss>`,
+  `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>此岸</title><link>${origin}</link><description>不渡彼岸，只记此岸。</description><language>zh-CN</language>${posts.map((p) => `<item><title>${escape(p.data.title)}</title><link>${origin}/posts/${p.slug}/</link><guid>${origin}/posts/${p.slug}/</guid><description>${escape(p.data.description)}</description>${p.data.date ? `<pubDate>${new Date(p.data.date).toUTCString()}</pubDate>` : ""}</item>`).join("")}</channel></rss>`,
 );
 fs.writeFileSync(
   "public/sitemap.xml",

@@ -967,6 +967,10 @@ svg {
     width: 100%;
     padding-top: 0;
   }
+  .last-line {
+    flex-wrap: wrap;
+    gap: 12px 20px;
+  }
   .hero h1 {
     font-size: 44px;
     margin-top: 27px;

@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://shore-journal-caosk.lightrook8.chatgpt.site"),
-  title: { default: "此岸 · 写代码，也记下一些寻常", template: "%s · 此岸" },
+  title: { default: "此岸 · 不渡彼岸，只记此岸。", template: "%s · 此岸" },
   description:
     "在南京，做技术，偶尔写字。关于旧事、家人，以及还没想明白的生活。",
   alternates: { types: { "application/rss+xml": "/feed.xml" } },

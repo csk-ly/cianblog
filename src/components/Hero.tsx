@@ -53,22 +53,15 @@ export default function Hero() {
         </div>
         <h1>
           <BlurText
-            text="写代码，"
+            text="不渡彼岸，"
             animateBy="letters"
             delay={75}
             direction="bottom"
             className="hero-title-line"
           />
-          <BlurText
-            text="也记下一些"
-            animateBy="letters"
-            delay={65}
-            direction="bottom"
-            className="hero-title-line"
-          />
           <span className="last-line">
             <BlurText
-              text="寻常。"
+              text="只记此岸。"
               animateBy="letters"
               delay={100}
               direction="bottom"
