@@ -1,17 +1,44 @@
 "use client";
 import Link from "next/link";
 import {
+  AnimatePresence,
   motion,
   useReducedMotion,
   useScroll,
   useTransform,
 } from "motion/react";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { photos } from "@/lib/photos";
 import BlurText from "./BlurText";
 import { Arrow } from "./icons";
 export default function Hero() {
   const ref = useRef<HTMLElement>(null);
   const reduce = useReducedMotion();
+  const [photoIndex, setPhotoIndex] = useState(0);
+  const photo = photos[photoIndex];
+  useEffect(() => {
+    setPhotoIndex(Math.floor(Math.random() * photos.length));
+  }, []);
+  useEffect(() => {
+    if (photos.length < 2) return;
+    const next =
+      (photoIndex + 1 + Math.floor(Math.random() * (photos.length - 1))) %
+      photos.length;
+    const image = new Image();
+    image.src = photos[next].src;
+    const ready = image.decode().then(
+      () => true,
+      () => false,
+    );
+    let cancelled = false;
+    const timer = window.setTimeout(async () => {
+      if ((await ready) && !cancelled) setPhotoIndex(next);
+    }, 10_000);
+    return () => {
+      cancelled = true;
+      window.clearTimeout(timer);
+    };
+  }, [photoIndex]);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -79,19 +106,28 @@ export default function Hero() {
           animate={{ opacity: 1, clipPath: "inset(0 0 0% 0)" }}
           transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
         >
-          <img
-            src="/images/coffee.jpg"
-            alt="窗边手冲咖啡的瞬间，一点日常里的停顿"
-            fetchPriority="high"
-          />
+          <AnimatePresence initial={false}>
+            <motion.img
+              key={photo.src}
+              src={photo.src}
+              alt={photo.title}
+              fetchPriority="high"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: reduce ? 0 : 1.2 }}
+            />
+          </AnimatePresence>
           <div className="photo-shade" />
           <span className="photo-vertical">把日子，写成自己的模样。</span>
         </motion.div>
         <div className="photo-caption">
-          <span>FIG. 01 — A MOMENT OF STILLNESS</span>
-          <span>日常的切片</span>
+          <span>
+            FIG. {String(photoIndex + 1).padStart(2, "0")} — FRAGMENTS OF LIGHT
+          </span>
+          <span>{photo.title}</span>
         </div>
-        <span className="photo-number">NANJING / 日常</span>
+        <span className="photo-number">SHORE / {photo.category}</span>
         <div className="hero-stamp">
           日常
           <br />

@@ -257,6 +257,8 @@ svg {
   background: #d4caba;
 }
 .hero-photo img {
+  position: absolute;
+  inset: 0;
   filter: saturate(0.55) brightness(0.86);
   object-position: 50% 50%;
   transition: transform 1.3s cubic-bezier(0.22, 1, 0.36, 1);

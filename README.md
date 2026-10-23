@@ -51,7 +51,7 @@ draft: false
 - 新增、修改、删除文章后，需要重新构建和部署。
 - Markdown 仅保存在源码中；网站不提供原文下载入口，也不发布原文文件。浏览器已收到的文章内容无法从技术上完全禁止复制或保存。
 - 首页文案在 `src/components/Hero.tsx`；站名、导航在 `src/components/Navigation.tsx`；配色在 `src/app/globals.css`。
-- 相册在 `src/components/Album.tsx` 配置，当前使用九张有来源标识的风景与生活示例配图。支持分类、放大、上一张、下一张、Esc 关闭与方向键切换。
+- 光影图库在 `src/lib/photos.ts` 配置，共 33 张配图；相册支持分类和大图浏览。首页右侧共用此图库，随机选图并每 10 秒切换，配有预加载和淡入淡出。
 
 ## 已接入的文章
 
